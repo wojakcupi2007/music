@@ -1,0 +1,220 @@
+button {
+  margin: 0 5px;
+}
+#progress-bar-container {
+  width: 300px;
+  height: 10px;
+  background-color: #ccc;
+  margin: 10px auto;
+}
+
+#progress-bar {
+  height: 100%;
+  background-color: #4CAF50;
+  width: 0;
+}
+body { 
+  background: rgb(3, 0, 170);
+    background:linear-gradient(45deg, rgb(0, 0, 5) 0%, rgb(3, 0, 49) 0%, rgb(9, 0, 90) 48%, rgb(0, 18, 117) 100%);
+     font-family:Helvetica,Arial,Verdana,sans-serif;
+    background-size: 300% 100%;
+
+    animation: 1s ease infinite;
+    animation-name: animacion1;
+    
+    
+
+}
+
+@keyframes animacion1 {
+  0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+* { box-sizing: border-box;}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: lighgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.player {
+    min-width: 320px;
+    background-image: linear-gradient(black, rgb(117, 20, 228));
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.685);
+    
+}
+
+.title {
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.cover {
+    width: 128px;
+    height: auto;
+    border-radius: .3rem;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+
+.progress-container {
+    height: .6rem;
+    background-color: lightgray;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    background-color: goldenrod;
+    width: 0;
+    height: 100%;
+}
+
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.controls button {
+    background-color: transparent;
+    border: none;
+}
+
+.controls i {
+    font-size: 1.7rem;
+    color: white;
+}
+
+
+.songs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.songs li {
+    margin-bottom: 1rem;
+}
+
+.songs a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.songs a.active {
+    color: white;
+    font-weight: bold;
+}
+.cover {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem auto;
+    animation: rotate 10s linear infinite, rainbowBorder 5s linear infinite; 
+    position: relative;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes rainbowBorder {
+    0% {
+        border-top: 5px solid red;
+        border-right: 5px solid orange;
+        border-bottom: 5px solid yellow;
+        border-width: 5px solid green;
+    }
+    16% {
+        border-top: 5px solid orange;
+        border-right: 5px solid yellow;
+        border-bottom: 5px solid green;
+        border-width: 5px solid blue;
+    }
+    33% {
+        border-top: 5px solid yellow;
+        border-right: 5px solid green;
+        border-bottom: 5px solid blue;
+        border-width: 5px solid indigo;
+    }
+    50% {
+        border-top: 5px solid green;
+        border-right: 5px solid blue;
+        border-bottom: 5px solid indigo;
+        border-width: 5px solid violet;
+    }
+    66% {
+        border-top: 5px solid blue;
+        border-right: 5px solid indigo;
+        border-bottom: 5px solid violet;
+        border-width: 5px solid red;
+    }
+    83% {
+        border-top: 5px solid indigo;
+        border-right: 5px solid violet;
+        border-bottom: 5px solid red;
+        border-width: 5px solid orange;
+    }
+    100% {
+        border-top: 5px solid violet;
+        border-right: 5px solid red;
+        border-bottom: 5px solid orange;
+        border-width: 5px solid yellow;
+    }
+}
+
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit; 
+}
+
+.triangle-container {
+    position: absolute;
+    top: 10;
+    left: 10;
+    pointer-events: none;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid rgb(229, 255, 0);
+    position: absolute;
+    transition: transform 1s, background-color 1s, opacity 1s;
+    
+  }
+
+  
